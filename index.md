@@ -362,6 +362,132 @@ uploads/
 * Admin assignment system
 * Ticket priority automation
 
+
+
+
+### 🤖 Automated First Response System
+
+📌 Feature Overview
+
+The Help Desk system includes an automated first response mechanism that sends an acknowledgement message to the company when a ticket is raised for the first time.
+
+This ensures:
+
+Instant confirmation to the client
+
+Better user experience
+
+Professional SaaS-like support workflow
+
+Reduced manual support dependency
+
+## ⚙️ How It Works
+
+When a company raises a ticket:
+
+Ticket is inserted into the tickets table.
+
+First message (issue description) is inserted into ticket_messages as:
+
+sender_type = Company
+
+Immediately after that, the system automatically inserts a single automated response from Admin:
+
+sender_type = Admin
+
+After this automated message, all further communication follows the normal chat flow.
+
+## 🧠 Automated Message Logic
+
+Automated message is triggered only once per ticket
+
+It is inserted right after ticket creation
+
+It simulates real support acknowledgment
+
+Example automated message:
+
+Thank you for contacting EdgeHR Support.
+Your ticket has been received successfully.
+Our support team will review your issue and respond shortly.
+
+## 🗄 Database Flow
+tickets table
+
+Stores:
+
+  Ticket metadata
+
+  Status
+
+  Priority
+
+  Attachment
+
+  Company reference
+
+
+
+ticket_messages table
+
+  Stores:
+
+  All chat messages
+
+  Sender type (Admin / Company)
+
+  Message content
+
+  Timestamp
+
+
+
+## 🔄 Ticket Chat Flow
+  Company raises ticket
+          ↓
+  Company first message saved
+          ↓
+  Automated admin acknowledgement sent
+          ↓
+  Manual admin replies
+          ↓
+  Normal conversation continues
+
+
+### 🎯 Purpose of This Feature
+
+This feature was implemented to:
+
+Improve perceived response time
+
+Build trust with client companies
+
+Mimic real enterprise support systems
+
+Prepare system for future AI chatbot integration
+
+
+
+### 🚀 Future Scope
+
+This automated system can be extended to support:
+
+AI-based smart replies
+
+Category-based auto responses
+
+SLA timers
+
+Email notifications
+
+WhatsApp / SMS integrations
+
+Bot typing simulation
+
+Knowledge base suggestions
+
+
+
 ---
 
 ### 📌 Summary
