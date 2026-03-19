@@ -181,6 +181,205 @@ EdgeHR — Smart Human Resource Management System
 
 
 
+# 🎧 EdgeHR Helpdesk & Ticket Support System
+
+A complete **Helpdesk Ticket Management & Support Chat System** built inside the EdgeHR platform.
+This module allows companies to raise support tickets and communicate with the admin through a real-time styled chat interface.
+
+---
+
+## 🚀 Features
+
+### 🎟 Ticket Management
+
+* Companies can raise support tickets
+* Ticket includes:
+
+  * Subject
+  * Description
+  * Priority (Low / Medium / High / Critical)
+  * Optional attachment (image/pdf)
+* Ticket status lifecycle:
+
+  * Open
+  * In Progress
+  * Resolved
+  * Closed
+
+---
+
+### 💬 Ticket Conversation (Chat System)
+
+* Admin and Company can reply inside ticket thread
+* Chat UI styled like modern messaging apps
+* Features include:
+
+  * Left/right aligned messages (Admin vs Company)
+  * Profile avatar support
+  * Timestamp display
+  * Auto scroll to latest message
+  * Typing indicator animation
+  * Default avatar fallback if image not available
+
+---
+
+### 🧑‍💼 Role Based Access Control
+
+#### Admin
+
+* View all tickets
+* Reply to tickets
+* Update ticket status
+* See company profile logo in chat
+* Full ticket management access
+
+#### Company
+
+* Raise support ticket
+* View own tickets only
+* Reply to admin messages
+* View ticket conversation
+* Access ticket history
+
+---
+
+### 📄 Ticket Listing
+
+#### Company Side (`my-tickets.php`)
+
+* Table listing of all raised tickets
+* Columns:
+
+  * Ticket ID
+  * Subject
+  * Priority
+  * Status badge
+  * Created date
+  * View action button
+
+#### Admin Side
+
+* Centralized ticket dashboard
+* Company identification included
+
+---
+
+### 📎 Attachment Support
+
+* File upload while raising ticket
+* Supported formats:
+
+  * JPG
+  * PNG
+  * PDF
+* Secure storage inside:
+
+```
+/uploads/tickets/
+```
+
+---
+
+### 🖼 Avatar System
+
+* Admin avatar from:
+
+```
+/uploads/admins/
+```
+
+* Company logo from:
+
+```
+/uploads/companies/
+```
+
+* Automatic fallback to default image if not available
+
+---
+
+### 🎨 UI/UX Enhancements
+
+* Modern chat bubble UI
+* Clean dashboard card layout
+* Responsive table design
+* Mobile optimized ticket view
+* Bootstrap based layout system
+* Typing animation indicator
+
+---
+
+### 🔐 Security Measures
+
+* Session based authentication
+* Role based access restriction
+* Ticket ownership validation
+* SQL injection safe query handling
+* Secure file linking
+
+---
+
+### ⚙️ Tech Stack
+
+* PHP (Core PHP)
+* MySQL
+* Bootstrap 5
+* JavaScript
+* HTML5 + CSS3
+
+---
+
+### 📂 Folder Structure (Relevant)
+
+```
+admin/
+    tickets.php
+    admin-ticket-view.php
+    reply-ticket.php
+
+company/
+    raise-ticket.php
+    my-tickets.php
+    ticket-view.php
+
+uploads/
+    tickets/
+    admins/
+    companies/
+```
+
+---
+
+### 🧠 Future Improvements (Planned)
+
+* Email notification on ticket reply
+* Real-time chat using AJAX / WebSocket
+* Unread message badge
+* Ticket search & filtering
+* Pagination
+* SLA tracking system
+* File preview inside chat
+* Admin assignment system
+* Ticket priority automation
+
+---
+
+### 📌 Summary
+
+This Helpdesk module enables seamless **Admin ↔ Company communication**, ensuring structured issue tracking, faster resolution, and improved user support experience within EdgeHR.
+
+---
+
+## 🧑‍💻 Author
+
+**Rahul Goswami**
+EdgeHR Platform Developer
+
+
+
+
+
+
 
 
 ## 🔐 Company & Employee Block / Unblock System
